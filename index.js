@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const {Router} = require("./routes/product")
+const {Routers} = require("./routes/product")
 const {userRouter} = require("./routes/userRouter")
 const {cartRouter} = require("./routes/cartRouter")
 const {orderRouter} = require("./routes/orderRouter")
@@ -13,7 +13,7 @@ app.use(cors());
 
 app.set("view engine" ,"ejs")
 
-app.use("/",Router)
+app.use("/",Routers)
 
 app.use("/auth",userRouter)
 
