@@ -5,7 +5,6 @@ const getAllProducts = async(req,res)=>{
   try{
     const product =  await productRouter.find();
     res.send(product)
-    console.log(req.user)
   }
  
   catch(err){
